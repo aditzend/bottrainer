@@ -26,7 +26,7 @@ class ProjectsList extends React.Component {
             accessor: 'name',
             filterable: true,
             filterMethod: (filter, rows) => (this.filterItem(filter, rows, 'name')),
-            Header: 'Nombre',
+            Header: 'Descripción',
             Cell: props => (
                 <Link to={`/project/${props.original._id}/nlu/models`}>{props.value}</Link>
             ),
@@ -36,7 +36,7 @@ class ProjectsList extends React.Component {
             accessor: '_id',
             filterable: true,
             filterMethod: (filter, rows) => (this.filterItem(filter, rows, 'id')),
-            Header: 'ID',
+            Header: 'Stack',
         },
         ...(can('projects:w')
             ? [{

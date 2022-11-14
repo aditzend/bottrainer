@@ -31,7 +31,8 @@ const getDefaultDefaultDomain = () => {
     const fields = {
         'settings.private.defaultDefaultDomain': 1,
     };
-    const { settings: { private: { defaultDefaultDomain = {} } = {} } = {} } = GlobalSettings.findOne({}, { fields }) || {};
+    const { settings: { private: { defaultDefaultDomain = {} } = {} } = {} } =
+        GlobalSettings.findOne({}, { fields }) || {};
     return defaultDefaultDomain;
 };
 
@@ -47,6 +48,7 @@ export const createProject = (item) => {
     });
     return Projects.insert({
         ...item,
+        _id: item.namespace,
         defaultDomain: { content: getDefaultDefaultDomain() },
         chatWidgetSettings: {
             title: item.name,
@@ -98,16 +100,16 @@ if (Meteor.isServer) {
                     ...(can('stories:r', projectId) ? { storyGroups: 1 } : {}),
                     ...(can('import:x', projectId)
                         ? {
-                            defaultDomain: 1,
-                        }
+                              defaultDomain: 1,
+                          }
                         : {}),
                     ...(can('import:x', projectId) || can('git-credentials:r', projectId)
                         ? {
-                            gitSettings: 1,
-                        }
+                              gitSettings: 1,
+                          }
                         : {}),
                 },
-            },
+            }
         );
     });
 
@@ -131,7 +133,7 @@ if (Meteor.isServer) {
         if (!can('stories:r', projectId)) return this.ready();
         return Projects.find(
             { _id: projectId },
-            { fields: { allowContextualQuestions: 1 } },
+            { fields: { allowContextualQuestions: 1 } }
         );
     });
 
