@@ -141,7 +141,7 @@ const AddStoryLine = React.forwardRef((props, ref) => {
                     disableExisting
                     trigger={(
                         <DashedButton color='green' size={size} data-cy='add-bot-line'>
-                            Bot
+                            Grupo
                         </DashedButton>
                     )}
                     trackOpenMenu={trackOpenMenu}
@@ -152,13 +152,13 @@ const AddStoryLine = React.forwardRef((props, ref) => {
                     onSelect={a => onCreateGenericLine({ action: a })}
                     trigger={(
                         <DashedButton color='pink' size={size} data-cy='add-action-line'>
-                            Action
+                            Acción
                         </DashedButton>
                     )}
                     trackOpenMenu={trackOpenMenu}
                 />
             )}
-            {slot && (
+            {/* {slot && (
                 <SlotPopupContent
                     onSelect={({ name, slotValue }) => onCreateGenericLine({ slot_was_set: [{ [name]: slotValue }] })
                     }
@@ -170,8 +170,8 @@ const AddStoryLine = React.forwardRef((props, ref) => {
                     trackOpenMenu={trackOpenMenu}
                     excludedSlotsOfType={['unfeaturized']}
                 />
-            )}
-            {loopActive && (
+            )} */}
+            {/* {loopActive && (
                 <Dropdown
                     trigger={(
                         <DashedButton
@@ -192,7 +192,7 @@ const AddStoryLine = React.forwardRef((props, ref) => {
                 >
                     {renderLoopMenu()}
                 </Dropdown>
-            )}
+            )} */}
         </div>
     );
 });

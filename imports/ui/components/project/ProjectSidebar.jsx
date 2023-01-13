@@ -34,7 +34,7 @@ class ProjectSidebar extends React.Component {
                     </Menu.Item>
                     <Can I='stories:r' projectId={projectId}>
                         <Link to={`/project/${projectId}/dialogue`}>
-                            <Menu.Item name='Historias' icon='book' data-cy='dialogue-sidebar-link' />
+                            <Menu.Item name='Grupos' icon='book' data-cy='dialogue-sidebar-link' />
                         </Link>
                     </Can>
                     <Can I='nlu-data:r' projectId={projectId}>

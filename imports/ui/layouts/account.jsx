@@ -43,9 +43,9 @@ class AccountLayout extends React.Component {
 
         return (
             <div style={bgStyle} className='setup'>
-                <Header style={titleStyle} content='BotTrainer' />
+                <Header style={titleStyle} content='Analytics' />
                 <div style={{ textAlign: 'center' }}>
-                    <DocumentTitle title={name || 'BotTrainer'} />
+                    <DocumentTitle title={name || 'Analytics'} />
                     <div style={loginBoxContainer}>{children}</div>
                 </div>
                 <Alert stack={{ limit: 3 }} />

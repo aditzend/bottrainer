@@ -65,16 +65,16 @@ const BotResponsePopupContent = (props) => {
                         )
                     }
                     <Dropdown.Item onClick={() => onCreate('TextPayload')} data-cy='from-text-template'>Text</Dropdown.Item>
-                    <Dropdown.Item disabled={noButtonResponse} onClick={() => onCreate('QuickRepliesPayload')} data-cy='from-qr-template'>Buttons and quick replies</Dropdown.Item>
+                    {/* <Dropdown.Item disabled={noButtonResponse} onClick={() => onCreate('QuickRepliesPayload')} data-cy='from-qr-template'>Buttons and quick replies</Dropdown.Item>
                     <Dropdown.Item disabled={noButtonResponse} onClick={() => onCreate('CarouselPayload')} data-cy='from-carousel-template'>Carousel</Dropdown.Item>
-                    <Dropdown.Item onClick={() => onCreate('ImagePayload')} data-cy='from-image-template'>Image</Dropdown.Item>
-                    <Dropdown.Item onClick={() => onCreate('CustomPayload')} data-cy='from-custom-template'>Custom</Dropdown.Item>
+                    <Dropdown.Item onClick={() => onCreate('ImagePayload')} data-cy='from-image-template'>Image</Dropdown.Item> */}
+                    <Dropdown.Item onClick={() => onCreate('CustomPayload')} data-cy='from-custom-template'>JSON</Dropdown.Item>
                     {!limitedSelection
                         && (
-                        <>
-                            <Dropdown.Item onClick={() => onCreate('VideoPayload')} data-cy='from-video-template'>Video</Dropdown.Item>
-                            <Dropdown.Item disabled={noButtonResponse} onClick={() => onCreate('ButtonPayload')} data-cy='from-button-template'>Button template</Dropdown.Item>
-                        </>
+                            <>
+                                <Dropdown.Item onClick={() => onCreate('VideoPayload')} data-cy='from-video-template'>Video</Dropdown.Item>
+                                <Dropdown.Item disabled={noButtonResponse} onClick={() => onCreate('ButtonPayload')} data-cy='from-button-template'>Button template</Dropdown.Item>
+                            </>
                         )
                     }
                 </Dropdown.Menu>

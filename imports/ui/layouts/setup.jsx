@@ -13,7 +13,7 @@ class SetupLayout extends React.Component {
 
         return (
             <div className='setup-layout' style={loginBoxContainer}>
-                <DocumentTitle title='BotTrainer' />
+                <DocumentTitle title='Analytics' />
                 {children}
             </div>
         );

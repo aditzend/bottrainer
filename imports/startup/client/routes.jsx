@@ -125,7 +125,7 @@ const withErrorCatcher = Component => props => <ErrorCatcher><Component {...prop
 class Routes extends React.PureComponent {
     render() {
         return (
-            <DocumentTitle title='BotTrainer'>
+            <DocumentTitle title='Analytics'>
                 <ApolloProvider client={apolloClient}>
                     <ApolloHooksProvider client={apolloClient}>
                         <Provider store={store}>

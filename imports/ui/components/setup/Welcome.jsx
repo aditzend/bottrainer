@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 
 export default () => (
     <div style={{ textAlign: 'center' }}>
-        <Header as='h1' content='Bienvenid@ a BotTrainer' className='setup-welcome-header' />
+        <Header as='h1' content='Bienvenid@ a Analytics' className='setup-welcome-header' />
         <br />
         <span className='step-text'>Vamos a crear su cuenta de administrador</span>
         <br />

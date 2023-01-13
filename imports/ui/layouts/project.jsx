@@ -163,7 +163,7 @@ function Project(props) {
                     </Header>
                 ) : (
                     <Header as='h1' className='logo'>
-                        BotTrainer
+                        Analytics
                     </Header>
                 )}
                 {(settings && settings.settings && settings.settings.public && settings.settings.public.smallLogoUrl) || project.smallLogoUrl ? (

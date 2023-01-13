@@ -98,15 +98,31 @@ const BotResponseContainer = (props) => {
             }}
         />
     );
+  
+    // const customObj = {
+    //         "group" : "Base",
+    //       "labels" : {
+    //         "es" : "Editar",
+    //         "en" : "Edit"
+    //       }
 
     const renderCustom = () => (
-        <Button
-            className='edit-custom-response'
+        //   <Button
+        //       className='edit-custom-response'
+        //       onClick={() => editCustom()}
+        //       data-cy='edit-custom-response'
+        //   >
+        //   JSON
+        // </Button>
+        <TextareaAutosize
+            ref={focusGrabber}
+            placeholder='Grupo'
+            role='button'
+            tabIndex={0}
+            value={JSON.stringify(value.custom, null, 2)}
             onClick={() => editCustom()}
-            data-cy='edit-custom-response'
-        >
-            Custom Format Response
-        </Button>
+        />
+
     );
 
     let extraClass = '';
