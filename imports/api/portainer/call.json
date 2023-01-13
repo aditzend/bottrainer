@@ -1,0 +1,12 @@
+{
+    "env": [
+        {
+            "name": "ACTION_SERVER_IMAGE",
+            "value": "alexanderditzend/actionserver:2.0.0"
+        }
+    ],
+    "fromAppTemplate": false,
+    "name": "superStack",
+    "stackFileContent": "version: 3\n services:\n web:\n image:nginx",
+    "swarmID": "lo3xqbb98ov4h3z0gy0ohazhg"
+}
