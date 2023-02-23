@@ -345,7 +345,8 @@ function UserUtteranceViewer(props) {
                 <div style={{ display: 'inline-block', marginLeft: '10px' }}>
                     {intent && (
                         <IntentLabel
-                            value={intent}
+                            value='INTENT'
+                            // value={intent}
                             allowEditing={!disableEditing}
                             allowAdditions
                             onChange={newIntent => onChangeWrapped({ ...value, intent: newIntent })}
